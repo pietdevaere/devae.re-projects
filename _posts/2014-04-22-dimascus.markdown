@@ -1,0 +1,38 @@
+---
+layout: 	post
+title:  	"Dimascus: controlling all the lights"
+date:   	2014-04-22 13:33:31
+permalink:	/dimascus
+---
+
+My brother is currently transforming an old public transport bus in to a house, and wants to light everything with ledstrips. He asked me to design a system that could do the following:
+
+1. Push a light swicht shortly, and the lights should toggle
+2. Push and hold a light and the light should start dimming untill you release the switch
+3. There should be a wake up light mode
+
+# The hardware
+
+![The dimascus controll board design](/projects/images/dimascus-board.png)
+
+As most of my projects the board is built around an atmega8 --- The are just so dirt cheap, and the arduino bootloader allows other people to thinker with the software later on. The inputs are fed through a bank of optocouplers to eliminate EMI, and at the outputs there are a bunch of mosfets to directly drive the led strips. The board was milled in [fablab brussels][bxl].
+
+![The populated board](/projects/images/dismascus-with-components.jpg)
+A crappy shot of the populated board.
+
+# The software
+
+To enable the wake up light mode: send a pulse to the wake up light pin, the slected led strips will than start to slowly fade.
+Appart from the requested features I addes some more:
+1. An all of pin: send a pulse to this pin, and all lights are turned off
+2. A party mode pin: send a pulse to this pin, and all lights start to hystericaly flicker
+
+# Status
+2014-08-15: The system is ready and awaiting installation. After the installation the software will be tweaked a bit.
+
+# More info
+
+The software and schematics are  on [github][]
+
+[github]: https://github.com/pietdevaere/dimascus
+[bxl]: http://www.fablabxl.be/

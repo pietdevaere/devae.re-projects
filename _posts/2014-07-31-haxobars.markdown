@@ -1,0 +1,32 @@
+---
+layout: 	post
+title:  	"Haxobars: just fooling around with DMX and Art-Net"
+date:   	2014-07-31 13:33:31
+permalink:	/haxobars
+---
+
+At [haxogreen][] the hackencenter (main tent) was lit with eurolite RGBA bars. GMC had an [Art-Net to DMX box][artnetbox] from [ohm2013][] with him, so we had no other choise but to wire up a DMX512 universe and make some super anoying blinking scripts.
+
+# Basic structure
+A couple of classes were used:
+
+* Effect: A superclass for effects
+    * Dimmer: A class to make lights slowly fade towards a certain color
+* Mapper: To map the software adress of the lights to their dmx hardware adress
+* Light: A superclass for fixtures (should be renamed ad some point)
+    * Parl40: A class for a specific spot ficture
+    * Eurospot: idem
+    * City: A class for city floodlights
+    * Bar: A class for the man RGBA lights that were in the tent
+* Camp: A class to sit on top of everything else and store what lights we have, and what there adresses are
+* Sender: A simple class to send out baic dmx packages, mainly used for debugging
+
+# More info
+
+The code is available on [github][]
+
+[ohm2013]:        (https://ohm2013.org)
+[artnetbox]:      (http://tkkrlab.nl/wiki/OHM_LEDS)
+[haxogreen]:      (http://haxogreen.lu)
+[github]:         (https://github.com/pietdevaere/haxobars)
+
