@@ -25,8 +25,8 @@ A couple of classes were used:
 
 The code is available on [github][]
 
-[ohm2013]:        (https://ohm2013.org)
-[artnetbox]:      (http://tkkrlab.nl/wiki/OHM_LEDS)
-[haxogreen]:      (http://haxogreen.lu)
-[github]:         (https://github.com/pietdevaere/haxobars)
+[ohm2013]:        https://ohm2013.org
+[artnetbox]:      http://tkkrlab.nl/wiki/OHM_LEDS
+[haxogreen]:      http://haxogreen.lu
+[github]:         https://github.com/pietdevaere/haxobars
 

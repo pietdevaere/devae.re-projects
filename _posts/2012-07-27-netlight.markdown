@@ -9,7 +9,7 @@ Together with gmc and zayra I hacked a traffic light to show the uplink status:
 
 <iframe src="http://www.youtube.com/embed/uxdJv-h0Fks" height="315" width="560" frameborder="0"></iframe>
 
-More info on [the bitlair wiki] &amp; [hackaday coverage]
+More info on [the bitlair wiki][] &amp; [hackaday coverage][]
 &nbsp;
 
 [the bitlair wiki]:      	https://wiki.bitlair.nl/Pages/Projects/Netlight

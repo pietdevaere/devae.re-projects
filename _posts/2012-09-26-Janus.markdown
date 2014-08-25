@@ -9,20 +9,20 @@ permalink:	/Janus
 
 Because I was annoyed that every time I came home I had to take out my keys, I wanted to make my front gate key less. At first I considered options like a keypad or RFID, but those all involved installing extra hardware at the gate and running extra cables.
 
-A couple of years ago I had read about a secret knock lock on hackaday, and I came up with the idea to do something similar, but to replace the knocking with ringing the doorbell. So I looked up the project, and found the source code write by [Steve Hoefer] to be almost perfect for what I wanted to do. After a few tweaks I already had a first prototype running.
+A couple of years ago I had read about a secret knock lock on hackaday, and I came up with the idea to do something similar, but to replace the knocking with ringing the doorbell. So I looked up the project, and found the source code write by [Steve Hoefer][] to be almost perfect for what I wanted to do. After a few tweaks I already had a first prototype running.
 
 # Hardware
 
-For the final hardware I used a [mehduino], a bare bone arduino clone designed at the [bitlair hackerspace] href="http://bitlair.nl">bitlair hackerspace</a> that already has some prototyping space around it. Apart for the mehduino, there are only some resistors, diodes, buttons, dip-switches and relays on the board. The board sits between the door unit and the rest of the bell system, and intercepts signals coming from the front unit. It can send two types of signals: open the gate, and ring the bell.
+For the final hardware I used a [mehduino][], a bare bone arduino clone designed at the [bitlair hackerspace][]that already has some prototyping space around it. Apart for the mehduino, there are only some resistors, diodes, buttons, dip-switches and relays on the board. The board sits between the door unit and the rest of the bell system, and intercepts signals coming from the front unit. It can send two types of signals: open the gate, and ring the bell.
 
 # Software
 
 When someone rings the bell, first the entire sequence is record. Once they stopped ringing, the recorded sequence is matched against the prerecorded secret code. If they match the board will open the gate, if they don't it will ring the bell.
-The code can be found on [github].
+The code can be found on [github][].
 
 ![The Janus board](/projects/images/janus-board.jpg)
 
-And the project got to [hackaday], [gizmodo], and [discovery channel] :)
+And the project got to [hackaday][], [gizmodo][], and [discovery channel][] :)
 
 [Steve Hoefer]:      	http://grathio.com/
 [mehduino]:		https://wiki.bitlair.nl/Pages/Projects/mehduino
