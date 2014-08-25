@@ -1,0 +1,11 @@
+# Site settings
+title: devae.re/projects
+email: piet@devae.re
+description: > # this means to ignore newlines until "baseurl:"
+  Piet De Vaere's project site
+baseurl: "/projects" # the subpath of your site, e.g. /blog/
+url: "http://devae.re" # the base hostname & protocol for your site
+github_username:  pietdevaere
+
+# Build settings
+markdown: kramdown

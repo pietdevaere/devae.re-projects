@@ -1,0 +1,33 @@
+---
+layout: 	post
+title:  	"Janus, the Gatekeeper"
+date:   	2012-09-26 15:51:31
+permalink:	/janus
+---
+
+<iframe src="http://www.youtube.com/embed/gS8TCY0PzgI" height="480px" width="100%" frameborder="0"></iframe>
+
+Because I was annoyed that every time I came home I had to take out my keys, I wanted to make my front gate keyless. At first I considered options like a keypad or RFID, but those all involved installing extra hardware at the gate and running extra cables.
+
+A couple of years ago I had read about a secret knock lock on hackaday, and I came up with the idea to do something simular, but to replace the knocking with ringing the doorbel. So I looked up the project, and found the source code writen by [Steve Hoefer] to be almost perfect for what I wanted to do. After a few tweaks I already had a first prototype running.
+
+# Hardware
+
+For the final hardware I used a [mehduino], a bare bone arduino clone designed at the [bitlair hackerspace] href="http://bitlair.nl">bitlair hackerspace</a> that already has some prototyping space around it. Appart for the mehduino, there are only some resistors, diodes, buttons, dip-switches and relays on the board. The board sits between the door unit and the rest of the bell system, and intercepts signals comming from the front unit. It can send two types of signals: open the gate, and ring the bell.
+
+# Software
+
+When someone rings the bell, first the entire sequence is record. Once they stoped ringing, the recorded sequence is matched against the prerecorded secret code. If they match the board will open the gate, if they don't it will ring the bell.
+The code can be found on [github].
+
+![The Janus board](/projects/images/janus-board.jpg)
+
+And the project got to [hackaday], [gizmodo], and [discovery channel] :)
+
+[Steve Hoefer]:      	http://grathio.com/
+[mehduino]:		https://wiki.bitlair.nl/Pages/Projects/mehduino
+[bitlair hackerspace]: 	http://bitlair.nl
+[github]:		https://github.com/pietdevaere/Janus
+[hackaday]:		http://hackaday.com/2012/09/29/janus-the-gatekeeper/
+[gizmodo]:		http://gizmodo.com/5947924/how-a-secret-sequence-of-doorbell-buzzes-can-unlock-your-home-with
+[discovery channel]:	http://www.youtube.com/watch?v=GixhxXC_HNk

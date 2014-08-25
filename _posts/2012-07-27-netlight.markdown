@@ -1,0 +1,17 @@
+---
+layout: 	post
+title:  	"Netlight at haxogreen"
+date:   	2012-07-27 15:51:31
+permalink:	/netlight
+---
+
+Together with gmc and zayra I hacked a traffic light to show the uplink status:
+
+<iframe src="http://www.youtube.com/embed/uxdJv-h0Fks" height="315" width="560" frameborder="0"></iframe>
+
+More info on [the bitlair wiki] &amp; [hackaday coverage]
+&nbsp;
+
+[the bitlair wiki]:      	https://wiki.bitlair.nl/Pages/Projects/Netlight
+[hackaday coverage]:		http://hackaday.com/2012/07/29/checking-network-status-with-a-traffic-light/#more-81238
+
