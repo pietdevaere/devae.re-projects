@@ -4,7 +4,7 @@ title:  	"The final countdown"
 date:   	2013-04-24 15:51:31
 permalink:	/countdown
 ---
-In Flanders (Belgium) sixth-formers yearly celebrate <em>the last 100 days</em>. This tradition celebrates that high school is almost over, and that freedom is on its way. Students will usually dress up in costumes and party all day and night long. Most school also organise special activities like a breakfast or allow students to decorate the school buildings.
+In Flanders (Belgium) sixth-formers yearly celebrate <em>the last 100 days</em>. This tradition celebrates that high school is almost over, and that freedom is on its way. Students will usually dress up in costumes and party all day and night long. Most school also organize special activities like a breakfast or allow students to decorate the school buildings.
 
 ![100 days party](/projects/images/final6.jpg)
 
@@ -12,9 +12,9 @@ This year I was one of the revelers and since the event is the start of a countd
 # Hardware
 At first I considered using large 7 segment display, but after some consideration I went with a large clock face that counts down from '100 days' to 'we survived!' (the theme of this year)
 
-![The clockfase](/projects/images/final1.jpg)
+![The clock face](/projects/images/final1.jpg)
 
-The clock face and hand are laser cutted out of 3 mm plywood, and all electronics and servo's are immediately attached to it. The board consists out of an ATmega8 running the Arduino bootloader and a RTC (ds1307).
+The clock face and hand are laser cuted out of 3 mm plywood, and all electronics and servo's are immediately attached to it. The board consists out of an ATmega8 running the Arduino boot loader and a RTC (ds1307).
 
 Last year I noticed a network switch above the ceiling tiles, so I assumed there must power there. Popping my head through the ceiling confirmed that, so I just went ahead and installed the thing.
 
@@ -22,7 +22,7 @@ Last year I noticed a network switch above the ceiling tiles, so I assumed there
 <b>— Grace Hopper —</b></blockquote>
 
 # Software
-The software is very simple. It reads out the RTC, calculates the remaining numer of days and then maps those value's to a position for the servo. The code is at the end of this post.
+The software is very simple. It reads out the RTC, calculates the remaining number of days and then maps those value's to a position for the servo. The code is at the end of this post.
 
 ![the clock mounted](/projects/images/final2.jpg)
 ![the electronics](/projects/images/final4.jpg)

@@ -5,21 +5,21 @@ date:   	2014-07-31 13:33:31
 permalink:	/haxobars
 ---
 
-At [haxogreen][] the hackencenter (main tent) was lit with eurolite RGBA bars. GMC had an [Art-Net to DMX box][artnetbox] from [ohm2013][] with him, so we had no other choise but to wire up a DMX512 universe and make some super anoying blinking scripts.
+At [haxogreen][] the hackcenter (main tent) was lit with eurolite RGBA bars. GMC had an [Art-Net to DMX box][artnetbox] from [ohm2013][] with him, so we had no other choice but to wire up a DMX512 universe and make some super annoying blinking scripts.
 
 # Basic structure
 A couple of classes were used:
 
 * Effect: A superclass for effects
     * Dimmer: A class to make lights slowly fade towards a certain color
-* Mapper: To map the software adress of the lights to their dmx hardware adress
+* Mapper: To map the software address of the lights to their DMX hardware address
 * Light: A superclass for fixtures (should be renamed ad some point)
-    * Parl40: A class for a specific spot ficture
+    * Parl40: A class for a specific spot fixture
     * Eurospot: idem
     * City: A class for city floodlights
     * Bar: A class for the man RGBA lights that were in the tent
-* Camp: A class to sit on top of everything else and store what lights we have, and what there adresses are
-* Sender: A simple class to send out baic dmx packages, mainly used for debugging
+* Camp: A class to sit on top of everything else and store what lights we have, and what there addresses are
+* Sender: A simple class to send out basic DMX packages, mainly used for debugging
 
 # More info
 
