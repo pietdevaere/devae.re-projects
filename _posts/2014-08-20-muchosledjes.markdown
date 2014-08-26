@@ -81,6 +81,10 @@ Next I wrote code for some effects like scrolling text, auto centering text, bli
 I also wrote a couple of lines to make it possible to display images on the screen.
 
 # Tweet to the display!
+
+<iframe src="http://www.youtube.com/embed/trRJJdUFywk" height="480px" width="100%" frameborder="0"></iframe>
+
+
 Inspired by [Juerd][] and his [ledbanner][] I made the frame generator listen on UDP for text messages to display on the display. Each message should start with a number indicating the priority, followed by the text to be displayed. The frame generator will first display all received messages with priority 0, next the ones with priority 1 etc. etc.
 
 I wrote two applications for this: one that can follow people and topics on twitter, and one that receives email.
