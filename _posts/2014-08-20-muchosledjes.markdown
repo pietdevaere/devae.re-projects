@@ -24,6 +24,7 @@ I wanted more than the software could do so I had two choices:
 I opted to go with the second option, so I puled out one of the display panels and started following traces and looking up data sheets.  
 I quickly found out the boards are pretty simple: There are two banks of shift registers on each board:
 one that contains the data for the horizontal lines, and one for the vertical data lines. Apart from that every board had some tri-sate buffers for the control signal.
+The pinout for the display pannels can be found on [github][]
 
 I hooked up an arduino to the data lines, and after some tinkering I could display my first real graphic:
 
@@ -37,9 +38,11 @@ Once I figured that out I started to always scan the lines, and I could display 
 ![A pattern on the entire image](/projects/images/muchos-pattern.jpg)
 
 After some experimenting it was clear an arduino was not going to cut it to drive this board, so I moved to a raspi.
+The downside to this was that I had to use level shifters, but since all data lines are monodirectional, a couple of transistors did the trick.
 
 # Writing the raspi drivers
 
+I slightly abused SPI to shift the data in to the shiftregisters controlling the collums, so I gave python a tiny chance to be able to scan the display fast enough.
 I started out by writing some drivers in python, but as expected the code was not fast enough: the display looked horrible. To get a higher and more constant refresh rate I rewrote the code in C, and it was better, but not quite what I was hoping for yet. The solution to this was to give the code real time priority, which can be achieved with the following code snippet:
 
 {% highlight C %}
