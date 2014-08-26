@@ -8,6 +8,8 @@ permalink:	/muchosledjes
 I recently scored a large full weatherproof 16 characters, 2 lines mono color led screen. Unfortunately the build in driver board was totally crap:
 You could only upload text to it via proprietary software, and there was no api of any sorts available. I wanted more, so I decided to reverse engineer the led panels, and come up with a new driver module.
 
+![The display](/projects/images/muchos-cover.jpg)
+
 #The basic structure of the display
 The original display consists of 16 daisy chained led boards, and there are two PSU's to power the thing. Furthermore There are a bunch of fans, another small psu to power the processor board and the processor board itself.
 This lasts board communicated over RS-232 with a computer that runs (crappy) proprietary software. Furthermore every board had an array of 7x14 pixels, every pixel consisting out of 4 leds on the same control lines. A character is 20 cm high.
@@ -57,7 +59,18 @@ I wrote a python program to generate the frame data. I started of by displaying 
 
 ![Displaying A B and C](/projects/images/muchos-abc.jpg)
 
-After this I found a font for led displays, and wrote a simple python script to convert the font to something that was compatible with my code. Now I could display the entire alphabet \o/
+After this I found a font for led displays, and wrote a simple python script to convert the font to something that was compatible with my code. Now I could display the entire alphabet \o/  
+The font is in a separate file and looks like this:
+
+    ! 00100 00000 00100 00100 00100 00100 00100
+    " 00000 00000 00000 00000 01010 01010 01010
+    # 01010 01010 11111 01010 11111 01010 01010
+    $ 00100 11110 00101 01110 10100 01111 00100
+    % 00011 10011 01000 00100 00010 11001 11000
+    & 01101 10010 10101 01000 10100 10010 01100
+    ' 00000 00000 00000 00000 01000 00100 01100
+
+First on a line is the ASCII character, followed by the data for every of the seven rows of the display.
 
 ![Displaying the quick brown fox](/projects/images/muchos-quick.jpg)
 
@@ -70,6 +83,9 @@ Inspired by [Juerd][] and his [ledbanner][] I made the frame generator listen on
 I wrote two applications for this: one that can follow people and topics on twitter, and one that receives email.
 The twitter application allows to follow different topics and people with different message priorities, so you can have a 'background' and a 'foreground' stream of messages. It also filters out all tweets containing 'RT', and removes all urls.
 The email client uses the subject of the mail as message, and only accepts messages when the body contains a shared secret.
+
+# Power usage
+When no leds are lit the display uses about 23 W, when all led's are on (scanning) the display uses up to 200 W.
 
 # Current state of the project
 2014-08-26: The raspi driver, frame generator, email and twitter followers are now working.
@@ -84,7 +100,7 @@ The email client uses the subject of the mail as message, and only accepts messa
 
     I'm currently planning to port the code to a beagle bone black, and see whether or not it runs smoothly.
 
-* The pixel above a lit pixel are dimly lit
+* The pixel above a lit pixel is dimly lit
     
     This is probably caused because I'm pulling the *Turn on the display* line high all the time, and the shift registers for the rows update quicker than the ones for the lines.
     I think that pulling the *Turn on display* low while changing over to the new data to show will solve this issue.
@@ -97,6 +113,7 @@ The email client uses the subject of the mail as message, and only accepts messa
 2. Add a cellular modem to it, so we can follow twitter everywhere
 3. Make a nice config file system to set what messages to display
 4. Make it possible to interrupt the normal cycle to display incoming messages
+5. Add a relay to cut the power to the power supplies if the display is inactive for a certain time.
 
 # More info
 
