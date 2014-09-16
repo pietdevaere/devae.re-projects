@@ -2,7 +2,7 @@
 layout: 	post
 title:  	"Dumbledore, another light controller"
 date:   	2014-09-16 13:33:31
-permalink:	/Dumbledore
+permalink:	/dumbledore
 ---
 
 
