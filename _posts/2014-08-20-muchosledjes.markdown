@@ -125,7 +125,7 @@ When no leds are lit the display uses about 23 W, when all led's are on (scannin
 
 # More info
 
-All of the code I wrote is on [github][]
+All of the code I wrote is on [github][]. The project got featured on [hackaday.com][], there is an intresting discussion about the power usage in the comments.
 
 # Mandatory hackaday shot
 
@@ -134,3 +134,4 @@ All of the code I wrote is on [github][]
 [Juerd]:          http://juerd.nl
 [ledbanner]:      https://revspace.nl/LedBanner
 [github]:         https://github.com/pietdevaere/muchosledjes
+[hackaday.com]:      http://hackaday.com/2014/08/28/reverse-engineering-a-huge-led-display/
