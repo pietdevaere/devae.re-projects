@@ -9,6 +9,7 @@ In Flanders (Belgium) sixth-formers yearly celebrate <em>the last 100 days</em>.
 ![100 days party](/projects/images/final6.jpg)
 
 This year I was one of the revelers and since the event is the start of a countdown, I decided to make a big countdown timer to count down to our graduation.
+
 # Hardware
 At first I considered using large 7 segment display, but after some consideration I went with a large clock face that counts down from '100 days' to 'we survived!' (the theme of this year)
 
